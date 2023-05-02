@@ -1,16 +1,13 @@
 <template>
 	<div id="app">
 		<div class="container">
-
-			<comp-header v-bind:title="title" v-bind:listUser="user" 
-			v-on:changeTitle="handleChangeTitle" />
-			<list-user  v-on:deleteUserEven = "handleDeleteUser" v-bind:listUser="user" />
-			<comp-footer v-bind:title="title"/>
+			<Ref/>
 		</div>
 	</div>
 </template>
 
 <script>
+import Ref from './components/Ref.vue'
 import listUser from './components/listUser.vue';
 import CompHeader from './components/CompHeader.vue';
 import CompFooter from './components/CompFooter.vue';
@@ -75,7 +72,8 @@ export default {
 	components: {
 		CompHeader,
 		CompFooter,
-		listUser
+		listUser,
+		Ref
 	}
 }
 </script>
