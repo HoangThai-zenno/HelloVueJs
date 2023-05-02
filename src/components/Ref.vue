@@ -9,6 +9,11 @@
 <script>
 export default {
     name: 'ref-demo',
+    data(){
+        return{
+
+        }
+    },
     methods:{
         handleChaneAvata(){
             this.$refs.changeAvata.click()

@@ -1,13 +1,16 @@
 <template>
 	<div id="app">
 		<div class="container">
-			<Ref/>
+			<SLotDemo>
+				<p>ABCDEFGHJKLMNOP</p>
+			</SLotDemo>
 		</div>
 	</div>
 </template>
 
 <script>
-import Ref from './components/Ref.vue'
+import SLotDemo from './components/SLotDemo.vue';
+import Ref from './components/Ref.vue';
 import listUser from './components/listUser.vue';
 import CompHeader from './components/CompHeader.vue';
 import CompFooter from './components/CompFooter.vue';
@@ -39,13 +42,13 @@ export default {
 				},
 				{
 					id: 5,
-                    name: 'user5',
-                    email: 'user5@example.com',
+					name: 'user5',
+					email: 'user5@example.com',
 				},
 				{
 					id: 6,
-                    name: 'user6',
-                    email: 'user6@example.com',
+					name: 'user6',
+					email: 'user6@example.com',
 				}
 			]
 		}
@@ -54,15 +57,15 @@ export default {
 		handleChangeTitle() {
 			this.title = 'Hello Vuejs is CHANGEEEE!';
 		},
-		handleDeleteUser(data){
+		handleDeleteUser(data) {
 			var indexDelete = -1;
-			this.user.forEach((u,idx)=>{
+			this.user.forEach((u, idx) => {
 				console.log(u.id, idx, data);
-				if(u.id === data.id){
+				if (u.id === data.id) {
 					indexDelete = idx;
 				}
 			});
-			if(indexDelete != -1){
+			if (indexDelete != -1) {
 				this.user.splice(indexDelete, 1);
 			}
 			console.log(indexDelete);
@@ -73,7 +76,8 @@ export default {
 		CompHeader,
 		CompFooter,
 		listUser,
-		Ref
+		Ref,
+		SLotDemo,
 	}
 }
 </script>
@@ -87,7 +91,8 @@ export default {
 	color: #2c3e50;
 	margin-top: 60px;
 }
-.container{
+
+.container {
 	max-width: 1170px;
 	margin: 0 auto;
 	padding: 0 15px;
